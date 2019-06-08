@@ -54,8 +54,10 @@
         <?php $startscreen = get_field('startscreen'); ?>
         <div class="start_screen_logo">
             <picture>
-                <source media="(max-width: 767px)" srcset="<?php echo $startscreen['mobile']['url'] ?>">
-                <source media="(min-width: 768px)" srcset="<?php echo $startscreen['desktop']['url'] ?>">
+                <source media="(max-width: 767px)"
+                        srcset="<?php echo $startscreen['mobile']['url'] ?>">
+                <source media="(min-width: 768px)"
+                        srcset="<?php echo $startscreen['desktop']['url'] ?>">
                 <img src="<?php echo $startscreen['desktop']['url'] ?>">
             </picture>
         </div>
@@ -70,12 +72,14 @@
     $bg_type = $startscreen_bg['bg-type']; ?>
     <?php if ($bg_type): ?>
         <?php $bg_video = $startscreen_bg['video'] ?>
-        <video loop muted autoplay poster="<?php echo $bg_video['poster'] ?>" class="start_video_bg">
+        <video loop muted autoplay poster="<?php echo $bg_video['poster'] ?>"
+               class="start_video_bg">
             <source src="<?php echo $bg_video['mp4'] ?>" type="video/mp4">
             <source src="<?php echo $bg_video['webm'] ?>" type="video/webm">
         </video>
     <?php else: ?>
-        <div class="start_screen_bg" style="background-image:url(<?php echo $startscreen_bg['image'] ?>)"></div>
+        <div class="start_screen_bg"
+             style="background-image:url(<?php echo $startscreen_bg['image'] ?>)"></div>
     <?php endif; ?>
 </section>
 
@@ -134,12 +138,15 @@
                                 ?>
                             </div>
                             <div class="uk-slider-nav service_navs">
-                                <a href="#" class="service_arrow left" uk-slider-item="previous"></a>
+                                <a href="#" class="service_arrow left"
+                                   uk-slider-item="previous"></a>
                                 <a href="#" class="service_arrow right" uk-slider-item="next"></a>
                             </div>
                         </div>
-                        <div class="service_icon" style="background-image:url(<?php echo $service_icon ?>)"></div>
-                        <div class="service_bg" style="background-image:url(<?php echo $service_image ?>)"></div>
+                        <div class="service_icon"
+                             style="background-image:url(<?php echo $service_icon ?>)"></div>
+                        <div class="service_bg"
+                             style="background-image:url(<?php echo $service_image ?>)"></div>
                     </div>
                 </div>
             <?php endforeach; ?>
@@ -200,8 +207,10 @@
                     <?php if ($production_1): ?>
                         <li class="production_item">
                             <div uk-slideshow="ratio: 720:480" class="production_images">
-                                <a uk-slideshow-item="previous" class="product_arrow left" href="#"></a>
-                                <a uk-slideshow-item="next" class="product_arrow right" href="#"></a>
+                                <a uk-slideshow-item="previous" class="product_arrow left"
+                                   href="#"></a>
+                                <a uk-slideshow-item="next" class="product_arrow right"
+                                   href="#"></a>
                                 <div class="uk-slideshow-items">
                                     <?php foreach ($production_1['slideshow'] as $image): ?>
                                         <img class="res" src="<?php echo $image['url']; ?>">
@@ -215,8 +224,10 @@
                     <?php if ($production_2): ?>
                         <li class="production_item">
                             <div uk-slideshow="ratio: 720:480" class="production_images">
-                                <a uk-slideshow-item="previous" class="product_arrow left" href="#"></a>
-                                <a uk-slideshow-item="next" class="product_arrow right" href="#"></a>
+                                <a uk-slideshow-item="previous" class="product_arrow left"
+                                   href="#"></a>
+                                <a uk-slideshow-item="next" class="product_arrow right"
+                                   href="#"></a>
                                 <div class="uk-slideshow-items">
                                     <?php foreach ($production_2['slideshow'] as $image): ?>
                                         <img class="res" src="<?php echo $image['url']; ?>">
@@ -229,8 +240,10 @@
                     <?php if ($production_3): ?>
                         <li class="production_item">
                             <div uk-slideshow="ratio: 720:480" class="production_images">
-                                <a uk-slideshow-item="previous" class="product_arrow left" href="#"></a>
-                                <a uk-slideshow-item="next" class="product_arrow right" href="#"></a>
+                                <a uk-slideshow-item="previous" class="product_arrow left"
+                                   href="#"></a>
+                                <a uk-slideshow-item="next" class="product_arrow right"
+                                   href="#"></a>
                                 <div class="uk-slideshow-items">
                                     <?php foreach ($production_3['slideshow'] as $image): ?>
                                         <img class="res" src="<?php echo $image['url']; ?>">
@@ -243,8 +256,10 @@
                     <?php if ($production_4): ?>
                         <li class="production_item">
                             <div uk-slideshow="ratio: 720:480" class="production_images">
-                                <a uk-slideshow-item="previous" class="product_arrow left" href="#"></a>
-                                <a uk-slideshow-item="next" class="product_arrow right" href="#"></a>
+                                <a uk-slideshow-item="previous" class="product_arrow left"
+                                   href="#"></a>
+                                <a uk-slideshow-item="next" class="product_arrow right"
+                                   href="#"></a>
                                 <div class="uk-slideshow-items">
                                     <?php foreach ($production_4['slideshow'] as $image): ?>
                                         <img class="res" src="<?php echo $image['url']; ?>">
@@ -261,26 +276,38 @@
                     class="production_thumbnav">
                     <?php if ($production_1): ?>
                         <a class="production_thumbnav_item prod_1" href="#prod_box">
-                            <div class='div'><span class='icon'></span><?php echo $production_1['thumb'] ?></div>
-                            <div class="more"><span><?php echo $production_1['button'] ?></span></div>
+                            <div class='div'><span
+                                        class='icon'></span><?php echo $production_1['thumb'] ?>
+                            </div>
+                            <div class="more"><span><?php echo $production_1['button'] ?></span>
+                            </div>
                         </a>
                     <?php endif; ?>
                     <?php if ($production_2): ?>
                         <a class="production_thumbnav_item prod_2" href="#prod_box">
-                            <div class='div'><span class='icon'></span><?php echo $production_2['thumb'] ?></div>
-                            <div class="more"><span><?php echo $production_2['button'] ?></span></div>
+                            <div class='div'><span
+                                        class='icon'></span><?php echo $production_2['thumb'] ?>
+                            </div>
+                            <div class="more"><span><?php echo $production_2['button'] ?></span>
+                            </div>
                         </a>
                     <?php endif; ?>
                     <?php if ($production_3): ?>
                         <a class="production_thumbnav_item prod_3" href="#prod_box">
-                            <div class='div'><span class='icon'></span><?php echo $production_3['thumb'] ?></div>
-                            <div class="more"><span><?php echo $production_3['button'] ?></span></div>
+                            <div class='div'><span
+                                        class='icon'></span><?php echo $production_3['thumb'] ?>
+                            </div>
+                            <div class="more"><span><?php echo $production_3['button'] ?></span>
+                            </div>
                         </a>
                     <?php endif; ?>
                     <?php if ($production_4): ?>
                         <a class="production_thumbnav_item prod_4" href="#prod_box">
-                            <div class='div'><span class='icon'></span><?php echo $production_4['thumb'] ?></div>
-                            <div class="more"><span><?php echo $production_4['button'] ?></span></div>
+                            <div class='div'><span
+                                        class='icon'></span><?php echo $production_4['thumb'] ?>
+                            </div>
+                            <div class="more"><span><?php echo $production_4['button'] ?></span>
+                            </div>
                         </a>
                     <?php endif; ?>
                 </ul>
@@ -307,7 +334,8 @@
             </script> -->
         </div>
     </div>
-    <div class="production_bg" style="background-image:url(<?php echo $production_section['image'] ?>)"></div>
+    <div class="production_bg"
+         style="background-image:url(<?php echo $production_section['image'] ?>)"></div>
 </section>
 
 <section id="partners" class="partners_section">
@@ -330,7 +358,8 @@
                         <?php foreach ($partners_row as $row): ?>
                             <?php $company = $row['company']; ?>
                             <li class="pre_part_item">
-                                <div class="image"><img src="<?php echo $company['logo'] ?>" class="res"></div>
+                                <div class="image"><img src="<?php echo $company['logo'] ?>"
+                                                        class="res"></div>
                                 <div class="text">
                                     <div><?php echo $company['name'] ?></div>
                                     <span><?php echo $company['about'] ?></span>
@@ -354,7 +383,8 @@
                                 <?php echo $company['description'] ?>
                             </div>
                             <div uk-slideshow="ratio: 720:480" class="partners_images">
-                                <a uk-slideshow-item="previous" class="partners_arrow left" href="#"></a>
+                                <a uk-slideshow-item="previous" class="partners_arrow left"
+                                   href="#"></a>
                                 <ul class="uk-slideshow-items">
                                     <?php foreach ($company['photo'] as $image): ?>
                                         <li>
@@ -363,7 +393,8 @@
                                         </li>
                                     <?php endforeach; ?>
                                 </ul>
-                                <a uk-slideshow-item="next" class="partners_arrow right" href="#"></a>
+                                <a uk-slideshow-item="next" class="partners_arrow right"
+                                   href="#"></a>
                             </div>
                         </li>
                     <?php endforeach; ?>
@@ -384,7 +415,8 @@
                         <?php foreach ($partners_row as $row): ?>
                             <?php $company = $row['company']; ?>
                             <li class="partners_thumbnav_item">
-                                <div class="thumb_image"><img src="<?php echo $company['logo'] ?>" class="res"></div>
+                                <div class="thumb_image"><img src="<?php echo $company['logo'] ?>"
+                                                              class="res"></div>
                                 <div class="thumb_text">
                                     <div><?php echo $company['name'] ?></div>
                                     <span><?php echo $company['about'] ?></span>
@@ -445,18 +477,17 @@
                         <?php $project = $row['project']; ?>
                         <div class="work_item row">
                             <div class="title col-12"><?php echo $project['name'] ?></div>
-                            <div uk-slideshow="ratio: 720:480" class="col-lg-6 work_images">
-                                <a uk-slideshow-item="previous" class="work_arrow left" href="#"></a>
+
+                            <div uk-slideshow="ratio: 720:480" class="col-lg-6 work_images work_alignment">
+                                <a uk-slideshow-item="previous" class="work_arrow left"
+                                   href="#"></a>
                                 <div class="uk-slideshow-items">
                                     <?php foreach ($project['photo'] as $image): ?>
                                         <img src="<?php echo $image['url'] ?>" class="res">
                                     <?php endforeach; ?>
                                 </div>
-                                <a uk-slideshow-item="next" class="work_arrow right" href="#"></a>
-                            </div>
-                            <div class="col-lg-5 offset-lg-1 work_descript">
-                                <?php echo $project['prew'] ?>
-                                <?php echo $project['about'] ?>
+                                <a uk-slideshow-item="next" class="work_arrow right"
+                                   href="#"></a>
                             </div>
                         </div>
                     <?php endforeach; ?>
@@ -484,7 +515,8 @@
         </div>
 
     </div>
-    <div class="our_work_bg" style="background-image:url(<?php echo $ourworks_section['image'] ?>)"></div>
+    <div class="our_work_bg"
+         style="background-image:url(<?php echo $ourworks_section['image'] ?>)"></div>
 </section>
 
 <script src="<?php bloginfo('template_url') ?>/js/slick.min.js"></script>
@@ -496,8 +528,10 @@
             <div class="col-xl-3 col-md-4">
                 <div class="footer_first">
                     <img src="<?php echo $footer['logo'] ?>">
-                    <a class="phone" href="tel:<?php echo $footer['phone'] ?>"><?php echo $footer['phone'] ?></a>
-                    <a class="mail" href="<?php echo $footer['mail'] ?>"><?php echo $footer['mail'] ?></a>
+                    <a class="phone"
+                       href="tel:<?php echo $footer['phone'] ?>"><?php echo $footer['phone'] ?></a>
+                    <a class="mail"
+                       href="<?php echo $footer['mail'] ?>"><?php echo $footer['mail'] ?></a>
                 </div>
             </div>
             <div class="col-xl-3 col-md-4">
