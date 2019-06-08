@@ -180,41 +180,25 @@ $(document).ready(function () {
       },
     ],
   })
-  $(function () {
-    UIkit.switcher('works_list')
-    $('.works_list').on(
-      {
-        'beforeshow': function () {
-          $('.pre_work').hide()
-          $('.work_more').css({
-            'height': 'auto',
-            'overflow': 'visible',
-          })
-        },
-      })
-    $.each($('.pre_learn_more'), function (index) {
-      $(this).on('click', function () {
-        console.log(index)
-        var curr_part = index
-        $('.work_thumb').each(function (i) {
-          if (i === curr_part) {
-            $(this).addClass('uk-active')
-          }
-        })
-        // debugger
-        // slider3.goTo('first')
-        // slider3.goTo(curr_part)
-      })
-    })
-  })
 
   $(function () {
     UIkit.switcher('works_list')
+
     const work_thumb = $('.work_thumb')
     work_thumb.slice(0, 4).addClass('ready')
     work_thumb.removeClass('tns-slide-active')
+
+    function beforeShowWork () {
+      $('.pre_work').hide()
+      $('.work_more').css({
+        'height': 'auto',
+        'overflow': 'visible',
+      })
+    }
+
     $('.works_list').on(
       {
+        'beforeshow': beforeShowWork,
         'beforehide': function () {
           $('.work_thumb').removeClass('ready')
           const ukactive = $('.work_thumb.uk-active')
@@ -222,7 +206,21 @@ $(document).ready(function () {
           ukactive.next().addClass('ready')
         },
       })
-  })
 
-// fin
+    $.each($('.pre_learn_more'), function (index) {
+      $(this).on('click', function () {
+        var curr_part = index
+        $('.work_thumb').each(function (i) {
+          $(this).removeClass('uk-active')
+          if (i === curr_part) {
+            $(this).addClass('uk-active')
+          }
+        })
+        if (index === 0) {
+          beforeShowWork()
+        }
+        slider3.goTo(curr_part)
+      })
+    })
+  })
 })
